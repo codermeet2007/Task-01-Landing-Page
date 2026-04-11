@@ -37,8 +37,5 @@ project/
 2. Open `index.html` in any modern web browser.
 
 ## Screenshot
-> Add your project screenshot here.
-
-```md
-![Nexus Studio Landing Page](assets/screenshot.png)
-```
+![Nexus Studio Landing Page - 1](assets/pic1.png)
+![Nexus Studio Landing Page - 2](assets/pic3.png)
