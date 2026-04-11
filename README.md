@@ -25,10 +25,10 @@ Nexus Studio is a responsive landing page featuring a fixed navbar with dynamic 
 ```text
 project/
 ├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── main.js
+├── style.css
+│   
+├── main.js
+│   
 └── assets/
 ```
 
