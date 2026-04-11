@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!-- Nexus Studio | Landing Page -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nexus Studio builds digital experiences that people remember." />
+  <title>Nexus Studio — Creative Agency</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="blob-layer" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">Nexus Studio</a>
+
+      <button class="hamburger" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero reveal" id="home">
+      <div class="container hero-layout">
+        <div>
+          <p class="hero-kicker">Creative Agency · Nexus Studio</p>
+          <h1>
+            <span class="line-light">We design bold</span>
+            <span class="line-bold"><span class="grad-word">moments</span> online</span>
+          </h1>
+          <p class="hero-copy">We build digital experiences that people remember. From launch strategy to product polish, we craft brand spaces with character, clarity, and momentum.</p>
+          <span class="hero-tagline">Nexus Studio · Interface Craft + Brand Systems</span>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-frame">
+            <div class="orb o1"></div>
+            <div class="orb o2"></div>
+            <div class="orb o3"></div>
+            <svg class="wire-svg" viewBox="0 0 100 100" role="presentation">
+              <path d="M8 78 C22 54, 38 58, 48 40 S76 18, 92 28" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="0.6"/>
+              <path d="M14 20 C26 36, 44 28, 56 46 S80 74, 90 66" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="0.5"/>
+              <circle cx="48" cy="40" r="1.5" fill="#f97316"/>
+              <circle cx="56" cy="46" r="1.4" fill="#ec4899"/>
+              <circle cx="76" cy="18" r="1.1" fill="#fb7185"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-indicator" href="#work" aria-label="Scroll down to Work section">
+        Scroll
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5v14"></path>
+          <path d="m6 13 6 6 6-6"></path>
+        </svg>
+      </a>
+    </section>
+
+    <section id="work" class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <h2>Selected Work</h2>
+          <p>Three recent builds where strategy met craft, and each launch pushed a brand into a stronger digital identity.</p>
+        </div>
+
+        <div class="work-grid">
+          <article class="work-card one reveal-card" style="--delay:0.1s;">
+            <span class="pill">Brand Platform</span>
+            <h3>Northline Archive</h3>
+            <p>A storytelling-led editorial hub that turned a niche publication into a daily destination.</p>
+          </article>
+
+          <article class="work-card two reveal-card" style="--delay:0.2s;">
+            <span class="pill">E-commerce Experience</span>
+            <h3>Rove Atelier</h3>
+            <p>Rebuilt product discovery flows that increased first-session conversion and repeat visits.</p>
+          </article>
+
+          <article class="work-card three reveal-card" style="--delay:0.3s;">
+            <span class="pill">Product Launch Site</span>
+            <h3>Kiteframe Cloud</h3>
+            <p>A motion-forward launch page that made a technical platform feel clear, useful, and human.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="services-title">Services</h2>
+          <p>Hands-on support from idea to rollout, designed for teams that care about detail and outcomes.</p>
+        </div>
+
+        <div class="services-board">
+          <div class="service-row">
+            <article class="service-item reveal-card" style="--delay:0.1s;">
+              <h3>🧭 Brand Direction</h3>
+              <p>Voice, visuals, and strategic guardrails that give every touchpoint a consistent character.</p>
+            </article>
+            <article class="service-item reveal-card" style="--delay:0.2s;">
+              <h3>🧱 Interface Design</h3>
+              <p>Purposeful layouts and design systems that make complex products feel natural to use.</p>
+            </article>
+          </div>
+          <div class="service-row">
+            <article class="service-item reveal-card" style="--delay:0.3s;">
+              <h3>⚙️ Front-end Build</h3>
+              <p>Performant implementation with clean, maintainable code and polished micro-interactions.</p>
+            </article>
+            <article class="service-item reveal-card" style="--delay:0.4s;">
+              <h3>📈 Launch Support</h3>
+              <p>Post-launch refinement focused on clarity, speed, and measurable audience response.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact reveal" id="contact">
+      <div class="container">
+        <h2>Ready to shape something unforgettable?</h2>
+        <a href="mailto:hello@nexusstudio.dev" class="outline-btn">Get in Touch</a>
+
+        <div class="contact-links">
+          <a href="mailto:hello@nexusstudio.dev" aria-label="Email Nexus Studio">
+            <svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 8 8-6H4l8 6Zm8 5V9l-8 6-8-6v9h16Z"/></svg>
+            Email
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24"><path d="M6.94 8.5a1.69 1.69 0 1 1 0-3.38 1.69 1.69 0 0 1 0 3.38ZM5.5 9.75h2.9V19h-2.9V9.75Zm4.68 0h2.78v1.26h.04c.39-.73 1.34-1.5 2.77-1.5 2.96 0 3.51 1.94 3.51 4.47V19h-2.9v-3.98c0-.95-.02-2.18-1.33-2.18-1.34 0-1.55 1.05-1.55 2.11V19h-2.9V9.75Z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+            <svg viewBox="0 0 24 24"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.12.82-.26.82-.58v-2.05c-3.35.72-4.05-1.61-4.05-1.61-.55-1.4-1.34-1.78-1.34-1.78-1.1-.75.08-.73.08-.73 1.22.09 1.86 1.25 1.86 1.25 1.08 1.86 2.84 1.32 3.53 1 .11-.79.42-1.32.76-1.62-2.67-.3-5.48-1.34-5.48-5.95 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.62-2.82 5.64-5.5 5.94.43.38.81 1.1.81 2.23v3.3c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nexus Studio</span>
+      <span>Built with HTML CSS JS</span>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
