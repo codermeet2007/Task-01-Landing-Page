@@ -1,172 +1,156 @@
 <!DOCTYPE html>
-<!-- Nexus Studio | Landing Page -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Nexus Studio builds digital experiences that people remember." />
-  <title>Nexus Studio — Creative Agency</title>
-
+  <meta name="description" content="A beginner-friendly learning website for HTML, CSS, and Java." />
+  <title>CodeLaunch Academy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="blob-layer" aria-hidden="true">
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="blob b3"></div>
-  </div>
-
-  <header class="site-header" id="siteHeader">
-    <div class="container nav-inner">
-      <a href="#home" class="logo">Nexus Studio</a>
-
-      <button class="hamburger" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+  <header class="hero" id="top">
+    <nav class="navbar">
+      <a class="brand" href="#top">CodeLaunch Academy</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#html">HTML</a>
+        <a href="#css">CSS</a>
+        <a href="#java">Java</a>
+        <a href="#roadmap">Roadmap</a>
+      </div>
+    </nav>
 
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <div class="hero-content">
+      <div>
+        <p class="eyebrow">Start learning web development</p>
+        <h1>Learn HTML, CSS, and Java in one clean beginner website.</h1>
+        <p class="hero-copy">
+          Explore simple lessons, core concepts, and quick study paths for three popular technologies.
+          This site is built with separate HTML, CSS, and JavaScript files exactly as requested.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#topics">Start Learning</a>
+          <button class="secondary-btn" id="themeToggle" type="button">Switch Theme</button>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <h2>What you will learn</h2>
+        <ul>
+          <li><strong>HTML:</strong> Page structure, headings, forms, links, and semantic tags.</li>
+          <li><strong>CSS:</strong> Colors, spacing, layout, responsiveness, and styling systems.</li>
+          <li><strong>Java:</strong> Syntax, OOP basics, JVM concepts, and backend foundations.</li>
+        </ul>
+        <div class="progress-card">
+          <span>Learning focus</span>
+          <div class="meter"><div class="meter-fill" id="meterFill"></div></div>
+          <p id="focusText">Pick a topic below to update your learning focus.</p>
+        </div>
+      </aside>
     </div>
   </header>
 
   <main>
-    <section class="hero reveal" id="home">
-      <div class="container hero-layout">
-        <div>
-          <p class="hero-kicker">Creative Agency · Nexus Studio</p>
-          <h1>
-            <span class="line-light">We design bold</span>
-            <span class="line-bold"><span class="grad-word">moments</span> online</span>
-          </h1>
-          <p class="hero-copy">We build digital experiences that people remember. From launch strategy to product polish, we craft brand spaces with character, clarity, and momentum.</p>
-          <span class="hero-tagline">Nexus Studio · Interface Craft + Brand Systems</span>
-        </div>
-
-        <div class="hero-art" aria-hidden="true">
-          <div class="art-frame">
-            <div class="orb o1"></div>
-            <div class="orb o2"></div>
-            <div class="orb o3"></div>
-            <svg class="wire-svg" viewBox="0 0 100 100" role="presentation">
-              <path d="M8 78 C22 54, 38 58, 48 40 S76 18, 92 28" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="0.6"/>
-              <path d="M14 20 C26 36, 44 28, 56 46 S80 74, 90 66" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="0.5"/>
-              <circle cx="48" cy="40" r="1.5" fill="#f97316"/>
-              <circle cx="56" cy="46" r="1.4" fill="#ec4899"/>
-              <circle cx="76" cy="18" r="1.1" fill="#fb7185"/>
-            </svg>
-          </div>
-        </div>
+    <section class="section" id="topics">
+      <div class="section-heading">
+        <p class="eyebrow">Core topics</p>
+        <h2>Choose a subject and see why it matters.</h2>
       </div>
 
-      <a class="scroll-indicator" href="#work" aria-label="Scroll down to Work section">
-        Scroll
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 5v14"></path>
-          <path d="m6 13 6 6 6-6"></path>
-        </svg>
-      </a>
-    </section>
+      <div class="topic-selector" role="tablist" aria-label="Learning topics">
+        <button class="topic-tab active" type="button" data-topic="html" role="tab" aria-selected="true">HTML Basics</button>
+        <button class="topic-tab" type="button" data-topic="css" role="tab" aria-selected="false">CSS Styling</button>
+        <button class="topic-tab" type="button" data-topic="java" role="tab" aria-selected="false">Java Programming</button>
+      </div>
 
-    <section id="work" class="reveal">
-      <div class="container">
-        <div class="section-head">
-          <h2>Selected Work</h2>
-          <p>Three recent builds where strategy met craft, and each launch pushed a brand into a stronger digital identity.</p>
-        </div>
+      <div class="topic-display" id="topicDisplay">
+        <article class="topic-card active" id="html" data-card="html">
+          <span class="topic-label">HTML</span>
+          <h3>Build the structure of every webpage.</h3>
+          <p>HTML gives content meaning. You use it to create headings, paragraphs, images, buttons, forms, and accessible page sections.</p>
+          <ul>
+            <li>Learn semantic tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;section&gt;</code>.</li>
+            <li>Understand lists, links, tables, and forms.</li>
+            <li>Create a strong foundation before adding design or logic.</li>
+          </ul>
+        </article>
 
-        <div class="work-grid">
-          <article class="work-card one reveal-card" style="--delay:0.1s;">
-            <span class="pill">Brand Platform</span>
-            <h3>Northline Archive</h3>
-            <p>A storytelling-led editorial hub that turned a niche publication into a daily destination.</p>
-          </article>
+        <article class="topic-card" id="css" data-card="css">
+          <span class="topic-label">CSS</span>
+          <h3>Style layouts and make websites look professional.</h3>
+          <p>CSS controls presentation. It helps you design pages with color, spacing, typography, animations, and responsive layouts.</p>
+          <ul>
+            <li>Practice selectors, classes, variables, and pseudo states.</li>
+            <li>Use Flexbox and Grid for modern layouts.</li>
+            <li>Make pages mobile-friendly with media queries.</li>
+          </ul>
+        </article>
 
-          <article class="work-card two reveal-card" style="--delay:0.2s;">
-            <span class="pill">E-commerce Experience</span>
-            <h3>Rove Atelier</h3>
-            <p>Rebuilt product discovery flows that increased first-session conversion and repeat visits.</p>
-          </article>
-
-          <article class="work-card three reveal-card" style="--delay:0.3s;">
-            <span class="pill">Product Launch Site</span>
-            <h3>Kiteframe Cloud</h3>
-            <p>A motion-forward launch page that made a technical platform feel clear, useful, and human.</p>
-          </article>
-        </div>
+        <article class="topic-card" id="java" data-card="java">
+          <span class="topic-label">Java</span>
+          <h3>Learn a powerful language for apps and backend systems.</h3>
+          <p>Java is widely used for enterprise software, Android development, APIs, and object-oriented programming practice.</p>
+          <ul>
+            <li>Start with variables, loops, methods, and classes.</li>
+            <li>Understand objects, inheritance, and encapsulation.</li>
+            <li>Grow into backend development with frameworks later.</li>
+          </ul>
+        </article>
       </div>
     </section>
 
-    <section id="services" class="reveal">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="services-title">Services</h2>
-          <p>Hands-on support from idea to rollout, designed for teams that care about detail and outcomes.</p>
-        </div>
+    <section class="section lessons">
+      <div class="section-heading">
+        <p class="eyebrow">Study roadmap</p>
+        <h2 id="roadmap">A simple path for beginners.</h2>
+      </div>
 
-        <div class="services-board">
-          <div class="service-row">
-            <article class="service-item reveal-card" style="--delay:0.1s;">
-              <h3>🧭 Brand Direction</h3>
-              <p>Voice, visuals, and strategic guardrails that give every touchpoint a consistent character.</p>
-            </article>
-            <article class="service-item reveal-card" style="--delay:0.2s;">
-              <h3>🧱 Interface Design</h3>
-              <p>Purposeful layouts and design systems that make complex products feel natural to use.</p>
-            </article>
-          </div>
-          <div class="service-row">
-            <article class="service-item reveal-card" style="--delay:0.3s;">
-              <h3>⚙️ Front-end Build</h3>
-              <p>Performant implementation with clean, maintainable code and polished micro-interactions.</p>
-            </article>
-            <article class="service-item reveal-card" style="--delay:0.4s;">
-              <h3>📈 Launch Support</h3>
-              <p>Post-launch refinement focused on clarity, speed, and measurable audience response.</p>
-            </article>
-          </div>
-        </div>
+      <div class="lesson-grid">
+        <article class="lesson-card">
+          <h3>Step 1: HTML First</h3>
+          <p>Learn page structure, text tags, images, forms, and semantic elements.</p>
+        </article>
+        <article class="lesson-card">
+          <h3>Step 2: CSS Next</h3>
+          <p>Style your pages with colors, spacing, responsive layouts, and visual polish.</p>
+        </article>
+        <article class="lesson-card">
+          <h3>Step 3: Java Logic</h3>
+          <p>Study programming fundamentals and object-oriented thinking with Java.</p>
+        </article>
       </div>
     </section>
 
-    <section class="contact reveal" id="contact">
-      <div class="container">
-        <h2>Ready to shape something unforgettable?</h2>
-        <a href="mailto:hello@nexusstudio.dev" class="outline-btn">Get in Touch</a>
+    <section class="section quiz-section">
+      <div class="section-heading">
+        <p class="eyebrow">Quick check</p>
+        <h2>Test your understanding.</h2>
+      </div>
 
-        <div class="contact-links">
-          <a href="mailto:hello@nexusstudio.dev" aria-label="Email Nexus Studio">
-            <svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 8 8-6H4l8 6Zm8 5V9l-8 6-8-6v9h16Z"/></svg>
-            Email
-          </a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-            <svg viewBox="0 0 24 24"><path d="M6.94 8.5a1.69 1.69 0 1 1 0-3.38 1.69 1.69 0 0 1 0 3.38ZM5.5 9.75h2.9V19h-2.9V9.75Zm4.68 0h2.78v1.26h.04c.39-.73 1.34-1.5 2.77-1.5 2.96 0 3.51 1.94 3.51 4.47V19h-2.9v-3.98c0-.95-.02-2.18-1.33-2.18-1.34 0-1.55 1.05-1.55 2.11V19h-2.9V9.75Z"/></svg>
-            LinkedIn
-          </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-            <svg viewBox="0 0 24 24"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.12.82-.26.82-.58v-2.05c-3.35.72-4.05-1.61-4.05-1.61-.55-1.4-1.34-1.78-1.34-1.78-1.1-.75.08-.73.08-.73 1.22.09 1.86 1.25 1.86 1.25 1.08 1.86 2.84 1.32 3.53 1 .11-.79.42-1.32.76-1.62-2.67-.3-5.48-1.34-5.48-5.95 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.62-2.82 5.64-5.5 5.94.43.38.81 1.1.81 2.23v3.3c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg>
-            GitHub
-          </a>
+      <div class="quiz-card">
+        <p class="quiz-question">Which technology is mainly used to structure content on a webpage?</p>
+        <div class="quiz-actions">
+          <button type="button" class="quiz-btn" data-answer="wrong">CSS</button>
+          <button type="button" class="quiz-btn" data-answer="correct">HTML</button>
+          <button type="button" class="quiz-btn" data-answer="wrong">Java</button>
         </div>
+        <p class="quiz-result" id="quizResult" aria-live="polite">Choose an answer to see feedback.</p>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Nexus Studio</span>
-      <span>Built with HTML CSS JS</span>
-    </div>
+  <footer class="footer">
+    <p>Built with separate HTML, CSS, and JavaScript files.</p>
+    <p>&copy; <span id="year"></span> CodeLaunch Academy</p>
   </footer>
 
-  <script src="main.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
