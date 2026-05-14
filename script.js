@@ -24,9 +24,15 @@ const topicMeta = {
   }
 };
 
+const isKnownTopic = (topic) => Object.hasOwn(topicMeta, topic);
+
 const activateTopic = (selectedTopic) => {
+  if (!isKnownTopic(selectedTopic)) {
+    return;
+  }
+
   tabs.forEach((item) => {
-    const isActive = item.dataset.topic === selectedTopic;
+    const isActive = item.dataset.topic != null && item.dataset.topic === selectedTopic;
     item.classList.toggle("active", isActive);
     item.setAttribute("aria-selected", String(isActive));
   });
@@ -86,7 +92,7 @@ navLinks.querySelectorAll("a").forEach((link) => {
 if (window.location.hash) {
   const selectedTopic = window.location.hash.slice(1);
 
-  if (topicMeta[selectedTopic]) {
+  if (isKnownTopic(selectedTopic)) {
     activateTopic(selectedTopic);
   }
 }
