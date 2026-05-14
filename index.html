@@ -75,6 +75,28 @@
           <span class="topic-label">HTML</span>
           <h3>Build the structure of every webpage.</h3>
           <p>HTML gives content meaning. Start with structure, then move into accessibility, forms, SEO, and production-ready page architecture.</p>
+          <div class="syntax-grid">
+            <article class="syntax-card">
+              <h4>HTML syntax starter</h4>
+              <pre><code>&lt;main&gt;
+  &lt;section&gt;
+    &lt;h1&gt;Welcome to my page&lt;/h1&gt;
+    &lt;p&gt;I am learning HTML step by step.&lt;/p&gt;
+    &lt;a href="#topics"&gt;Start learning&lt;/a&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+              <p>Focus on opening and closing tags correctly and use meaningful elements for clean structure.</p>
+            </article>
+            <article class="syntax-card">
+              <h4>Form syntax practice</h4>
+              <pre><code>&lt;form&gt;
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input id="email" type="email" required /&gt;
+  &lt;button type="submit"&gt;Join&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+              <p>Practice labels, input types, and required attributes so users can submit valid data easily.</p>
+            </article>
+          </div>
           <div class="learning-path">
             <article class="level-card">
               <p class="level-tag">Beginner</p>
@@ -110,6 +132,33 @@
           <span class="topic-label">CSS</span>
           <h3>Style layouts and make websites look professional.</h3>
           <p>CSS controls presentation. Learn the basics first, then move into layout systems, responsiveness, animations, and polished design systems.</p>
+          <div class="syntax-grid">
+            <article class="syntax-card">
+              <h4>CSS syntax starter</h4>
+              <pre><code>.card {
+  padding: 1rem;
+  border-radius: 12px;
+  background: #0f172a;
+  color: #e5eefc;
+}</code></pre>
+              <p>Learn selector + property + value format and keep your spacing and naming consistent.</p>
+            </article>
+            <article class="syntax-card">
+              <h4>Responsive layout syntax</h4>
+              <pre><code>.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}</code></pre>
+              <p>Use media queries to make layouts adapt for tablets and mobile devices.</p>
+            </article>
+          </div>
           <div class="learning-path">
             <article class="level-card">
               <p class="level-tag">Beginner</p>
@@ -145,6 +194,26 @@
           <span class="topic-label">JavaScript</span>
           <h3>Add interactivity and logic to modern websites.</h3>
           <p>JavaScript brings pages to life. Learn syntax first, then master the DOM, APIs, async patterns, and app-level thinking.</p>
+          <div class="syntax-grid">
+            <article class="syntax-card">
+              <h4>JavaScript syntax starter</h4>
+              <pre><code>const button = document.querySelector("#startBtn");
+
+button.addEventListener("click", () =&gt; {
+  console.log("Learning started!");
+});</code></pre>
+              <p>Practice variables, functions, and event listeners to control user interactions.</p>
+            </article>
+            <article class="syntax-card">
+              <h4>Async syntax practice</h4>
+              <pre><code>async function loadLesson() {
+  const response = await fetch("/lessons.json");
+  const lessons = await response.json();
+  return lessons;
+}</code></pre>
+              <p>Understand <code>async</code> and <code>await</code> to handle APIs in clean, readable code.</p>
+            </article>
+          </div>
           <div class="learning-path">
             <article class="level-card">
               <p class="level-tag">Beginner</p>
