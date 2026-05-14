@@ -8,6 +8,7 @@
   --accent: #38bdf8;
   --accent-strong: #2563eb;
   --dark-text: #0f172a;
+  --code-text: #dbeafe;
   --border: rgba(148, 163, 184, 0.22);
   --shadow: 0 20px 60px rgba(15, 23, 42, 0.28);
 }
@@ -22,6 +23,7 @@ body.light-theme {
   --accent: #0284c7;
   --accent-strong: #1d4ed8;
   --dark-text: #0f172a;
+  --code-text: #dbeafe;
   --border: rgba(59, 130, 246, 0.18);
   --shadow: 0 20px 60px rgba(37, 99, 235, 0.14);
 }
@@ -330,7 +332,7 @@ h1 {
 .syntax-card pre code {
   background: transparent;
   padding: 0;
-  color: #dbeafe;
+  color: var(--code-text);
 }
 
 .syntax-card p:last-child {
