@@ -12,15 +12,15 @@ const year = document.getElementById("year");
 const topicMeta = {
   html: {
     width: "33%",
-    message: "HTML focus: learn the structure of a webpage first."
+    message: "HTML path: move from page structure basics to semantic, accessible, production-ready markup."
   },
   css: {
     width: "66%",
-    message: "CSS focus: learn how to style and arrange content beautifully."
+    message: "CSS path: start with styling basics, then master responsive layouts and polished design systems."
   },
-  java: {
+  javascript: {
     width: "100%",
-    message: "Java focus: build strong programming and object-oriented skills."
+    message: "JavaScript path: begin with syntax, then build interactive, API-powered experiences with confidence."
   }
 };
 
@@ -61,8 +61,8 @@ quizButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const isCorrect = button.dataset.answer === "correct";
     quizResult.textContent = isCorrect
-      ? "Correct! HTML is used to structure page content."
-      : "Not quite. HTML is the language used to structure webpage content.";
+      ? "Correct! JavaScript is used to add interactivity to webpages."
+      : "Not quite. JavaScript is the language that adds interactivity to webpages.";
     quizResult.classList.toggle("success", isCorrect);
     quizResult.classList.toggle("error", !isCorrect);
   });
