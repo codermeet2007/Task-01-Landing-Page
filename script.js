@@ -12,16 +12,39 @@ const year = document.getElementById("year");
 const topicMeta = {
   html: {
     width: "33%",
-    message: "HTML focus: learn the structure of a webpage first."
+    message: "HTML path: move from page structure basics to semantic, accessible, production-ready markup."
   },
   css: {
     width: "66%",
-    message: "CSS focus: learn how to style and arrange content beautifully."
+    message: "CSS path: start with styling basics, then master responsive layouts and polished design systems."
   },
-  java: {
+  javascript: {
     width: "100%",
-    message: "Java focus: build strong programming and object-oriented skills."
+    message: "JavaScript path: begin with syntax, then build interactive, API-powered experiences with confidence."
   }
+};
+
+const isKnownTopic = (topic) => Object.hasOwn(topicMeta, topic);
+
+const activateTopic = (selectedTopic) => {
+  if (!isKnownTopic(selectedTopic)) {
+    return;
+  }
+
+  tabs.forEach((item) => {
+    const isActive = item.dataset.topic != null && item.dataset.topic === selectedTopic;
+    item.classList.toggle("active", isActive);
+    item.setAttribute("aria-selected", String(isActive));
+  });
+
+  cards.forEach((card) => {
+    card.classList.toggle("active", card.dataset.card === selectedTopic);
+  });
+
+  meterFill.style.width = topicMeta[selectedTopic].width;
+  focusText.textContent = topicMeta[selectedTopic].message;
+  navLinks.classList.remove("open");
+  menuToggle.setAttribute("aria-expanded", "false");
 };
 
 menuToggle.addEventListener("click", () => {
@@ -31,22 +54,7 @@ menuToggle.addEventListener("click", () => {
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
-    const selectedTopic = tab.dataset.topic;
-
-    tabs.forEach((item) => {
-      const isActive = item === tab;
-      item.classList.toggle("active", isActive);
-      item.setAttribute("aria-selected", String(isActive));
-    });
-
-    cards.forEach((card) => {
-      card.classList.toggle("active", card.dataset.card === selectedTopic);
-    });
-
-    meterFill.style.width = topicMeta[selectedTopic].width;
-    focusText.textContent = topicMeta[selectedTopic].message;
-    navLinks.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
+    activateTopic(tab.dataset.topic);
   });
 });
 
@@ -61,8 +69,8 @@ quizButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const isCorrect = button.dataset.answer === "correct";
     quizResult.textContent = isCorrect
-      ? "Correct! HTML is used to structure page content."
-      : "Not quite. HTML is the language used to structure webpage content.";
+      ? "Correct! JavaScript is used to add interactivity to webpages."
+      : "Not quite. JavaScript is the language that adds interactivity to webpages.";
     quizResult.classList.toggle("success", isCorrect);
     quizResult.classList.toggle("error", !isCorrect);
   });
@@ -70,9 +78,23 @@ quizButtons.forEach((button) => {
 
 navLinks.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
+    const selectedTopic = link.dataset.topicLink;
+
+    if (selectedTopic) {
+      activateTopic(selectedTopic);
+    } else {
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }
   });
 });
+
+if (window.location.hash) {
+  const selectedTopic = window.location.hash.slice(1);
+
+  if (isKnownTopic(selectedTopic)) {
+    activateTopic(selectedTopic);
+  }
+}
 
 year.textContent = new Date().getFullYear();

@@ -300,6 +300,42 @@ h1 {
   display: block;
 }
 
+.learning-path {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.level-card {
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+}
+
+.level-card h4 {
+  margin-bottom: 0.75rem;
+}
+
+.level-card ul {
+  margin-bottom: 0;
+}
+
+.level-tag {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .topic-label {
   display: inline-block;
   margin-bottom: 0.8rem;
@@ -353,7 +389,8 @@ h1 {
 
 @media (max-width: 900px) {
   .hero-content,
-  .lesson-grid {
+  .lesson-grid,
+  .learning-path {
     grid-template-columns: 1fr;
   }
 }

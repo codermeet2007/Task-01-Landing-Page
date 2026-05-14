@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A beginner-friendly learning website for HTML, CSS, and Java." />
+  <meta name="description" content="A beginner-friendly learning website for HTML, CSS, and JavaScript." />
   <title>CodeLaunch Academy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,9 +20,9 @@
         <span></span>
       </button>
       <div class="nav-links" id="navLinks">
-        <a href="#html">HTML</a>
-        <a href="#css">CSS</a>
-        <a href="#java">Java</a>
+        <a href="#html" data-topic-link="html">HTML</a>
+        <a href="#css" data-topic-link="css">CSS</a>
+        <a href="#javascript" data-topic-link="javascript">JavaScript</a>
         <a href="#roadmap">Roadmap</a>
       </div>
     </nav>
@@ -30,10 +30,10 @@
     <div class="hero-content">
       <div>
         <p class="eyebrow">Start learning web development</p>
-        <h1>Learn HTML, CSS, and Java in one clean beginner website.</h1>
+        <h1>Learn HTML, CSS, and JavaScript from basic to advanced in one place.</h1>
         <p class="hero-copy">
-          Explore simple lessons, core concepts, and quick study paths for three popular technologies.
-          This site is built with separate HTML, CSS, and JavaScript files exactly as requested.
+          Click any language below and follow a clear path from beginner lessons to advanced skills.
+          Each section keeps the learning journey on the same page so users can study step by step.
         </p>
         <div class="hero-actions">
           <a class="primary-btn" href="#topics">Start Learning</a>
@@ -46,12 +46,12 @@
         <ul>
           <li><strong>HTML:</strong> Page structure, headings, forms, links, and semantic tags.</li>
           <li><strong>CSS:</strong> Colors, spacing, layout, responsiveness, and styling systems.</li>
-          <li><strong>Java:</strong> Syntax, OOP basics, JVM concepts, and backend foundations.</li>
+          <li><strong>JavaScript:</strong> Syntax, DOM events, APIs, async logic, and app-building skills.</li>
         </ul>
         <div class="progress-card">
           <span>Learning focus</span>
           <div class="meter"><div class="meter-fill" id="meterFill"></div></div>
-          <p id="focusText">Pick a topic below to update your learning focus.</p>
+          <p id="focusText">HTML path: move from page structure basics to semantic, accessible, production-ready markup.</p>
         </div>
       </aside>
     </div>
@@ -61,47 +61,119 @@
     <section class="section" id="topics">
       <div class="section-heading">
         <p class="eyebrow">Core topics</p>
-        <h2>Choose a subject and see why it matters.</h2>
+        <h2>Choose a language and learn it from basic to advanced.</h2>
       </div>
 
       <div class="topic-selector" role="tablist" aria-label="Learning topics">
-        <button class="topic-tab active" type="button" data-topic="html" role="tab" aria-selected="true">HTML Basics</button>
-        <button class="topic-tab" type="button" data-topic="css" role="tab" aria-selected="false">CSS Styling</button>
-        <button class="topic-tab" type="button" data-topic="java" role="tab" aria-selected="false">Java Programming</button>
+        <button class="topic-tab active" type="button" data-topic="html" role="tab" aria-selected="true">HTML</button>
+        <button class="topic-tab" type="button" data-topic="css" role="tab" aria-selected="false">CSS</button>
+        <button class="topic-tab" type="button" data-topic="javascript" role="tab" aria-selected="false">JavaScript</button>
       </div>
 
       <div class="topic-display" id="topicDisplay">
         <article class="topic-card active" id="html" data-card="html">
           <span class="topic-label">HTML</span>
           <h3>Build the structure of every webpage.</h3>
-          <p>HTML gives content meaning. You use it to create headings, paragraphs, images, buttons, forms, and accessible page sections.</p>
-          <ul>
-            <li>Learn semantic tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;section&gt;</code>.</li>
-            <li>Understand lists, links, tables, and forms.</li>
-            <li>Create a strong foundation before adding design or logic.</li>
-          </ul>
+          <p>HTML gives content meaning. Start with structure, then move into accessibility, forms, SEO, and production-ready page architecture.</p>
+          <div class="learning-path">
+            <article class="level-card">
+              <p class="level-tag">Beginner</p>
+              <h4>Build your first pages</h4>
+              <ul>
+                <li>Understand tags, attributes, headings, paragraphs, and links.</li>
+                <li>Create lists, images, tables, and simple forms.</li>
+                <li>Learn the purpose of <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code>.</li>
+              </ul>
+            </article>
+            <article class="level-card">
+              <p class="level-tag">Intermediate</p>
+              <h4>Write cleaner, semantic markup</h4>
+              <ul>
+                <li>Use semantic elements like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;section&gt;</code>.</li>
+                <li>Improve accessibility with labels, alt text, and landmarks.</li>
+                <li>Organize reusable page sections for blogs, landing pages, and dashboards.</li>
+              </ul>
+            </article>
+            <article class="level-card">
+              <p class="level-tag">Advanced</p>
+              <h4>Ship real-world content structures</h4>
+              <ul>
+                <li>Optimize content for SEO, performance, and assistive technologies.</li>
+                <li>Design advanced forms with validation-friendly structure.</li>
+                <li>Plan scalable markup systems that work with modern CSS and JavaScript.</li>
+              </ul>
+            </article>
+          </div>
         </article>
 
         <article class="topic-card" id="css" data-card="css">
           <span class="topic-label">CSS</span>
           <h3>Style layouts and make websites look professional.</h3>
-          <p>CSS controls presentation. It helps you design pages with color, spacing, typography, animations, and responsive layouts.</p>
-          <ul>
-            <li>Practice selectors, classes, variables, and pseudo states.</li>
-            <li>Use Flexbox and Grid for modern layouts.</li>
-            <li>Make pages mobile-friendly with media queries.</li>
-          </ul>
+          <p>CSS controls presentation. Learn the basics first, then move into layout systems, responsiveness, animations, and polished design systems.</p>
+          <div class="learning-path">
+            <article class="level-card">
+              <p class="level-tag">Beginner</p>
+              <h4>Style the basics</h4>
+              <ul>
+                <li>Learn selectors, colors, spacing, borders, and typography.</li>
+                <li>Practice classes, IDs, and simple hover effects.</li>
+                <li>Understand the box model and how spacing affects layout.</li>
+              </ul>
+            </article>
+            <article class="level-card">
+              <p class="level-tag">Intermediate</p>
+              <h4>Build responsive layouts</h4>
+              <ul>
+                <li>Use Flexbox and Grid for modern page sections.</li>
+                <li>Create tablet and mobile layouts with media queries.</li>
+                <li>Organize variables, reusable utilities, and component styling.</li>
+              </ul>
+            </article>
+            <article class="level-card">
+              <p class="level-tag">Advanced</p>
+              <h4>Create polished UI systems</h4>
+              <ul>
+                <li>Add transitions, transforms, and layered visual effects.</li>
+                <li>Build theme systems, scalable tokens, and reusable patterns.</li>
+                <li>Refine performance with maintainable selectors and clean architecture.</li>
+              </ul>
+            </article>
+          </div>
         </article>
 
-        <article class="topic-card" id="java" data-card="java">
-          <span class="topic-label">Java</span>
-          <h3>Learn a powerful language for apps and backend systems.</h3>
-          <p>Java is widely used for enterprise software, Android development, APIs, and object-oriented programming practice.</p>
-          <ul>
-            <li>Start with variables, loops, methods, and classes.</li>
-            <li>Understand objects, inheritance, and encapsulation.</li>
-            <li>Grow into backend development with frameworks later.</li>
-          </ul>
+        <article class="topic-card" id="javascript" data-card="javascript">
+          <span class="topic-label">JavaScript</span>
+          <h3>Add interactivity and logic to modern websites.</h3>
+          <p>JavaScript brings pages to life. Learn syntax first, then master the DOM, APIs, async patterns, and app-level thinking.</p>
+          <div class="learning-path">
+            <article class="level-card">
+              <p class="level-tag">Beginner</p>
+              <h4>Learn core programming basics</h4>
+              <ul>
+                <li>Start with variables, data types, conditions, loops, and functions.</li>
+                <li>Practice arrays, objects, and simple problem solving.</li>
+                <li>Write small scripts that react to button clicks and user input.</li>
+              </ul>
+            </article>
+            <article class="level-card">
+              <p class="level-tag">Intermediate</p>
+              <h4>Control the browser with confidence</h4>
+              <ul>
+                <li>Manipulate the DOM to update content dynamically.</li>
+                <li>Use events, forms, local storage, and fetch requests.</li>
+                <li>Break logic into reusable functions and modules.</li>
+              </ul>
+            </article>
+            <article class="level-card">
+              <p class="level-tag">Advanced</p>
+              <h4>Think like a real-world developer</h4>
+              <ul>
+                <li>Master async JavaScript with promises and <code>async/await</code>.</li>
+                <li>Handle APIs, state changes, and performance-focused UI updates.</li>
+                <li>Prepare for frameworks by building strong vanilla JavaScript fundamentals.</li>
+              </ul>
+            </article>
+          </div>
         </article>
       </div>
     </section>
@@ -109,21 +181,21 @@
     <section class="section lessons">
       <div class="section-heading">
         <p class="eyebrow">Study roadmap</p>
-        <h2 id="roadmap">A simple path for beginners.</h2>
+        <h2 id="roadmap">A simple path to become confident in each language.</h2>
       </div>
 
       <div class="lesson-grid">
         <article class="lesson-card">
-          <h3>Step 1: HTML First</h3>
-          <p>Learn page structure, text tags, images, forms, and semantic elements.</p>
+          <h3>Step 1: Start with the basics</h3>
+          <p>Learn syntax, core tags or rules, and build small exercises until the foundations feel natural.</p>
         </article>
         <article class="lesson-card">
-          <h3>Step 2: CSS Next</h3>
-          <p>Style your pages with colors, spacing, responsive layouts, and visual polish.</p>
+          <h3>Step 2: Practice intermediate projects</h3>
+          <p>Create full sections, responsive layouts, and interactive components to turn knowledge into skill.</p>
         </article>
         <article class="lesson-card">
-          <h3>Step 3: Java Logic</h3>
-          <p>Study programming fundamentals and object-oriented thinking with Java.</p>
+          <h3>Step 3: Reach advanced confidence</h3>
+          <p>Focus on accessibility, performance, clean architecture, and real-world project building.</p>
         </article>
       </div>
     </section>
@@ -135,11 +207,11 @@
       </div>
 
       <div class="quiz-card">
-        <p class="quiz-question">Which technology is mainly used to structure content on a webpage?</p>
+        <p class="quiz-question">Which language is mainly used to add interactivity to a webpage?</p>
         <div class="quiz-actions">
+          <button type="button" class="quiz-btn" data-answer="wrong">HTML</button>
           <button type="button" class="quiz-btn" data-answer="wrong">CSS</button>
-          <button type="button" class="quiz-btn" data-answer="correct">HTML</button>
-          <button type="button" class="quiz-btn" data-answer="wrong">Java</button>
+          <button type="button" class="quiz-btn" data-answer="correct">JavaScript</button>
         </div>
         <p class="quiz-result" id="quizResult" aria-live="polite">Choose an answer to see feedback.</p>
       </div>
