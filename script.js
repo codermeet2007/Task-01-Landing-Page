@@ -24,6 +24,23 @@ const topicMeta = {
   }
 };
 
+const activateTopic = (selectedTopic) => {
+  tabs.forEach((item) => {
+    const isActive = item.dataset.topic === selectedTopic;
+    item.classList.toggle("active", isActive);
+    item.setAttribute("aria-selected", String(isActive));
+  });
+
+  cards.forEach((card) => {
+    card.classList.toggle("active", card.dataset.card === selectedTopic);
+  });
+
+  meterFill.style.width = topicMeta[selectedTopic].width;
+  focusText.textContent = topicMeta[selectedTopic].message;
+  navLinks.classList.remove("open");
+  menuToggle.setAttribute("aria-expanded", "false");
+};
+
 menuToggle.addEventListener("click", () => {
   const isOpen = navLinks.classList.toggle("open");
   menuToggle.setAttribute("aria-expanded", String(isOpen));
@@ -31,22 +48,7 @@ menuToggle.addEventListener("click", () => {
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
-    const selectedTopic = tab.dataset.topic;
-
-    tabs.forEach((item) => {
-      const isActive = item === tab;
-      item.classList.toggle("active", isActive);
-      item.setAttribute("aria-selected", String(isActive));
-    });
-
-    cards.forEach((card) => {
-      card.classList.toggle("active", card.dataset.card === selectedTopic);
-    });
-
-    meterFill.style.width = topicMeta[selectedTopic].width;
-    focusText.textContent = topicMeta[selectedTopic].message;
-    navLinks.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
+    activateTopic(tab.dataset.topic);
   });
 });
 
@@ -70,9 +72,23 @@ quizButtons.forEach((button) => {
 
 navLinks.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
+    const selectedTopic = link.dataset.topicLink;
+
+    if (selectedTopic) {
+      activateTopic(selectedTopic);
+    } else {
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }
   });
 });
+
+if (window.location.hash) {
+  const selectedTopic = window.location.hash.slice(1);
+
+  if (topicMeta[selectedTopic]) {
+    activateTopic(selectedTopic);
+  }
+}
 
 year.textContent = new Date().getFullYear();
